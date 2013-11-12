@@ -12,7 +12,6 @@
 
 \usepackage{titlesec}
 \usepackage[left=0.5in, right=0.5in, top=0.4in, bottom=0.5in]{geometry}
-%\usepackage{titling}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% Preamble %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -20,9 +19,6 @@
 \newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf
     +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
 \def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
-
-\newcommand{\address}{3330 Spring Ln Apt D34 $\diamond$ Falls Church, VA 22041
-  $\diamond$ (571) 732-9827 $\diamond$ ludachrispeed@gmail.com}
 
 % sets the kind of bullet to use in bulleted lists
 \renewcommand{\labelitemi}{$\diamond$}
@@ -39,7 +35,7 @@
             {} % before code
             [\titlerule{}] % after code
 
-% set the format for subsections
+% set the format for subsections (from titlesec)
 \titleformat{\subsection} % the sectioning command to be redefined
             [hang] % shape
             {\bfseries\sffamily} % format to be applied
@@ -48,12 +44,14 @@
             {} % before code
             [] % after code
 
+% defines spacing for sections (moves sections 15pts into the left margin)
 \titlespacing*{\section} % the sectioning command
               {-15pt} % left
               {8pt} % before-sep
               {5pt} % after-sep
               [0pt] % right-sep
 
+% defines spacing for subsections
 \titlespacing*{\subsection} % the sectioning command
               {0pt} % left
               {2pt} % before-sep
@@ -98,7 +96,11 @@
 %\maketitle
 
 \section*{\LARGE Chris F. Clark}
-\vskip -5pt \address
+\vskip -5pt 
+
+% displayed right underneath the first horizontal rule
+3330 Spring Ln Apt D34 $\diamond$ Falls Church, VA 22041 $\diamond$ (571)
+732-9827 $\diamond$ ludachrispeed@gmail.com
 
 \section*{Education}
 
