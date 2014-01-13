@@ -1,21 +1,22 @@
-% My resume, by Chris Clark
-%
-% TODO 
-% - figure out how to remove section numbers without having to say section*
-% - make cool little tags for each position
-% - Relevent Skills section should probably be two-column
-% - Add an 'Online Identity' section with links to my various profiles
+% Resume uses 'article' documentclass. Sections are redefined using the titlesec
+% package (giving them a margin farther left than the other text, and giving
+% them a horizontal rule under the section title)
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% Front Matter %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Preamble %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[a4paper]{article}
+\documentclass[a4paper,11pt]{article}
 
 \usepackage{titlesec}
-\usepackage[left=0.5in, right=0.5in, top=0.4in, bottom=0.5in]{geometry}
+\usepackage{multicol}
+\usepackage[left=0.3in, right=0.4in, top=0.4in, bottom=0.5in]{geometry}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Preamble %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TODO: I'm not using these sweet tags, but I'm saving the code it case I do
+% sometime. Also they're not really done.
+% for those sweet tags I make
+%\usepackage{tikz}
+%\usetikzlibrary{positioning}
 
-% defines '\CC' as a way to render the word 'C++'
+% defines '\CC' as a command to render 'C++' nicely
 \newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf
     +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
 \def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
@@ -23,8 +24,14 @@
 % sets the kind of bullet to use in bulleted lists
 \renewcommand{\labelitemi}{$\diamond$}
 
-% sets the amount of space between paragraphs
+% amount of space before paragraphs
 \parskip 5pt
+
+% amount of space before and after a multicols environment
+\multicolsep 5pt
+
+% don't indent the first line of a paragraph
+\parindent 0pt
 
 % set the format for sections (this behavior comes from the titlesec package)
 \titleformat{\section} % the sectioning command to be redefined
@@ -32,7 +39,7 @@
             {\sffamily} % format to be applied
             {\thesection} % label
             {0pt} % sep
-            {} % before code
+            {\large} % before code
             [\titlerule{}] % after code
 
 % set the format for subsections (from titlesec)
@@ -47,18 +54,16 @@
 % defines spacing for sections (moves sections 15pts into the left margin)
 \titlespacing*{\section} % the sectioning command
               {-15pt} % left
-              {8pt} % before-sep
+              {0pt} % before-sep
               {5pt} % after-sep
               [0pt] % right-sep
 
 % defines spacing for subsections
 \titlespacing*{\subsection} % the sectioning command
               {0pt} % left
-              {2pt} % before-sep
-              {0pt} % after-sep
+              {0pt} % before-sep
+              {2pt} % after-sep
               [0pt] % right-sep
-
-\parindent 0pt
 
 \thispagestyle{empty} % remove page number
 
@@ -78,47 +83,35 @@
  }
 \makeatother
 
-% set everything that will be created by \maketitle
-%\title{Chris F. Clark}
-%\date{~}
-%\author{~}
-%\pretitle{\begin{flushleft}\hspace{-15pt}\LARGE\sffamily}
-%\posttitle{\end{flushleft}\vskip -5pt\hrule\address}
-%\preauthor{}
-%\postauthor{}
-%\predate{}
-%\postdate{}
-%\setlength{\droptitle}{-50pt}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Text %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-%\maketitle
 
-\section*{\LARGE Chris F. Clark}
-\vskip -5pt 
-
-% displayed right underneath the first horizontal rule
+% note: not using the \maketitle command. The name at the top is just a section
+\begin{center}
+{\sffamily \huge \textbf{Chris Clark}} \\
 3330 Spring Ln Apt D34 $\diamond$ Falls Church, VA 22041 $\diamond$ (571)
 732-9827 $\diamond$ ludachrispeed@gmail.com
+\end{center}
+
+% --------------------------- SECTION: EDUCATION -------------------------------
 
 \section*{Education}
 
-  \textsc{University of Virginia}, School of Enginnering and Applied
-  Science, Charlottesville, VA \\
-  \textsl{B.S. in Computer Science, May 2011}
+  \textsc{University of Virginia}, School of Engineering and Applied Science,
+  Charlottesville, VA \\
+  \textit{B.S. in Computer Science, May 2011}
 
   \subsection*{Activities}
 
-  RideForward: A UVA-based group of students and professors converting gas-powered cars
-    to electric drive. \\ 
+  \textit{RideForward}: A UVA-based group of students and professors converting
+  gas-powered cars to electric drive. \\ 
   \textsl{Positions held}: Technical team member, business team member, webmaster
 
   \subsection*{Relevent Coursework}
 
-  \begin{minipage}[t]{0.49\textwidth} \raggedright
-    \raggedright
-    \hyphenation{Representation}
+  \begin{multicols}{2} \raggedright
+
     \begin{itemize}
     \item \textit{Math}: Calculus I, II, III, Discrete Math, Differential
       Equations, Probability, Linear Algebra
@@ -127,79 +120,98 @@
     \item Defense Against the Dark Arts (computer viruses)
     \item Computer Networks
     \item Operating Systems
-    \end{itemize}
-  \end{minipage}
-  \begin{minipage}[t]{0.49\textwidth} \raggedright
-    \begin{itemize}
-    \item \textsl{Technical thesis\,}: The design and simulation of a control
-      system for a small electric vehicle
     \item Digital Logic Design
     \item Computer Architecture
     \item Theory of Computation (Discrete Math II)
     \item Algorithms
     \item Computer Vision
-    \item Science, Technology, and Society
+    \item \textsl{Technical thesis\,}: The Design and Simulation of a Control
+      System for a Small Electric Vehicle
     \end{itemize}
-  \end{minipage}
+  \end{multicols}
 
-\section*{Relevent Skills}
+% ------------------------ SECTION: RELEVENT SKILLS ----------------------------
 
-  \subsection*{Programming Languages}
+  \section*{Relevent Skills}
 
-  \textsl{Expert}: Java \\
-  \textsl{Proficient}: Bash shell script, SQL, Groovy, CSS, \LaTeX \\
-  \textsl{Familiarity}: C, \CC, MATLAB/Octave, gnuplot
+  \begin{multicols}{2} \raggedright
+
+  \subsection*{Web Frameworks and Web Technologies}
+
+  AngularJS, Grails, X/HTML, XML, XForms, CSS, Relational Databases
 
   \subsection*{Tools/Operating Systems}
 
   Emacs, Eclipse, IntelliJ, Subversion, Git, Perforce, Linux, Mac OS X
 
+  \subsection*{Programming Languages}
+
+  \textsl{Expert}: Java \\
+  \textsl{Proficient}: Bash, Javascript, SQL, Groovy, \LaTeX \\
+  \textsl{Familiarity}: C, \CC, MATLAB/Octave, gnuplot, Ceylon
+
+\end{multicols}
+
+% -------------------------- SECTION: EXPERIENCE -------------------------------
+
 \section*{Experience}
 
 \subsection*{Consultant for Red Hat Consulting}
 
-  As a consultant, I worked on several projects that Red Hat was hired to help
-  with.
-
   \vskip 5pt
   \begin{itemize}
 
-    \item \textsl{Website Development at GEICO} \hfill Aug 2012 -- Present
+    \item \textit{Website Development at GEICO \hfill Aug 2012 -- Present}
 
-      Enterprise web development using mostly Java EE 6, Spring MVC, and
+      Enterprise web development using mostly Java EE6, Spring MVC, and
       relational databases. Work focused RESTful web services ultimately meant
-      for mobile devices. Also developed internal error tracking applications.
+      for mobile devices. Also helped to develop an internal metrics tracking
+      application.
 
-      Tags: Java EE 6, Spring Framework, Spring MVC, XForms, JAXB
+      Technologies: Java EE6, Spring MVC, JAXB, XFORMS, MyBatis, Grails,
+      AngularJS
 
-    \item \textsl{Website development at Cigna} \hfill Nov 2011 -- July
+%      \begin{tikzpicture}[tag/.style={fill=blue!20,draw=blue!80,rounded corners}]
+%        \node (a) [tag] {Java EE6};
+%        \node (b) [tag, right=of a] {Spring};
+%        \node (c) [tag, right=of b] {JAXB};
+%        \node (d) [tag, right=of c] {XForms};
+%        \node (e) [tag, right=of d] {JAXB};
+%        \node (f) [tag, right=of e] {MyBatis};
+%        \node (g) [tag, right=of f] {Grails};
+%        \node (h) [tag, right=of g] {AngularJS};
+%      \end{tikzpicture}
+
+    \item \textit{Website development at Cigna \hfill Nov 2011 -- July}
       2012
 
-      Enterprise web development using Java EE 6, JBoss Drools, and Spring. Also
-      introduced and presented programming best practices to developers.
+      Member of a two-person team working on an enterprise web development
+      project using Java EE6, JBoss Drools, Spring, and iBATIS. Also introduced
+      and presented programming best practices to other software developers.
 
-      Tags: Java EE6, JBoss Drools, Spring Framework
+      Technologies: Java EE6, JBoss Drools, Spring Framework, iBATIS
 
-    \item \textsl{Website development at Kohl's} \hfill Aug 2011 -- Nov 2011
+    \item \textit{Website development at Kohl's \hfill Aug 2011 -- Nov 2011}
 
       Helped to revive and stabilize an old code base meant for kiosk machines
       (touch computers in shopping malls). Ported new functionality from the
       main website to the kiosk website. Implemented new UI features as
       requested by a UI requirements team.
 
-      Tags: Java EE 4, Starteam, IntelliJ, JSP
+      Technologies: Java EE4, Starteam, IntelliJ, JSP
 
   \end{itemize}
 
-\section*{Other Skills/Qualifications}
+% ---------------------- SECTION: OTHER SKILLS/HOBBIES -------------------------
+
+\vskip 4pt
+\section*{Other Skills/Hobbies}
+\vskip 5pt
 
   \begin{itemize}
     \item Foreign Languages: Latin (5 years), German (intermediate)
-    \item Music: I enjoy playing the cello. I hope to learn the piano. One day I
-      would like to create a website/mobile app that stores musical scores in a
-      format that allows for easily separating and displaying parts.
-    \item UVA Division I Varsity Cross Country, Track \& Field \hfill 2006--2008
-    \item UVA Club Gymnastics \hfill 2009--2010
+    \item Music: I enjoy playing the cello. I hope to learn the piano.
+    \item UVA Varsity Cross Country, Track \& Field \hfill \textit{2006--2008}
   \end{itemize}
 
 \end{document}
