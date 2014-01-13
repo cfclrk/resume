@@ -39,7 +39,7 @@
             {\sffamily} % format to be applied
             {\thesection} % label
             {0pt} % sep
-            {\large} % before code
+            {\Large} % before code
             [\titlerule{}] % after code
 
 % set the format for subsections (from titlesec)
@@ -65,7 +65,8 @@
               {2pt} % after-sep
               [0pt] % right-sep
 
-\thispagestyle{empty} % remove page number
+% remove page number at bottom of page
+\thispagestyle{empty}
 
 % adjust spacing in enumerate environment
 \makeatletter
@@ -96,6 +97,7 @@
 
 % --------------------------- SECTION: EDUCATION -------------------------------
 
+\vspace{-6pt}
 \section*{Education}
 
   \textsc{University of Virginia}, School of Engineering and Applied Science,
