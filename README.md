@@ -1,4 +1,4 @@
-Resume
+Résumé
 ======
 
 All source is in one file: chris_clark.tex, which uses the `article`
