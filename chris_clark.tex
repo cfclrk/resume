@@ -71,35 +71,38 @@
 
 % adjust spacing in enumerate environment
 \makeatletter
-\AtBeginDocument{%
-  \renewcommand{\@listi}
-  {\setlength{\itemsep}{0pt}
-   \setlength{\parsep}{3pt}
-   \setlength{\partopsep}{0pt}
-   \setlength{\parskip}{0pt}
-   \setlength{\topsep}{0pt}
-   \setlength{\leftmargin}{15pt}}
-  \renewcommand{\@listii}
-  {\setlength{\itemsep}{5pt}
-   \setlength{\topsep}{0pt}}
- }
+\AtBeginDocument {
+  \renewcommand{\@listi} {
+    \setlength{\itemsep}{0pt}
+    \setlength{\parsep}{3pt}
+    \setlength{\partopsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\topsep}{0pt}
+    \setlength{\leftmargin}{15pt}
+  }
+  \renewcommand{\@listii} {
+    \setlength{\itemsep}{5pt}
+    \setlength{\topsep}{0pt}
+  }
+}
 \makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Text %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-% note: not using the \maketitle command. The name at the top is just a section
+% note: not using the \maketitle command. We make our own title our own way.
 \begin{center}
-{\sffamily \huge \textbf{Chris Clark}} \\
-3330 Spring Ln \enspace\textopenbullet\enspace Falls Church, VA
-22041 \enspace\textopenbullet\enspace (571)
-732-9827 \enspace\textopenbullet\enspace ludachrispeed@gmail.com
+  {\sffamily \huge \textbf{Chris Clark}} \\
+  3330 Spring Ln \enspace\textopenbullet\enspace 
+  Falls Church, VA 22041 \enspace\textopenbullet\enspace
+  (571) 732-9827 \enspace\textopenbullet\enspace
+  ludachrispeed@gmail.com
 \end{center}
 
 % --------------------------- SECTION: EDUCATION -------------------------------
 
-\vspace{-7pt}
+\vspace{-8pt}
 \section*{Education}
 
   \textsc{University of Virginia}, School of Engineering and Applied Science,
@@ -109,12 +112,13 @@
   \subsection*{Activities}
 
   \textit{RideForward}: A UVA-based group of students and professors converting
-  gas-powered cars to electric drive. \\ 
-  \textsl{Positions held}: Technical team member, business team member, webmaster
+  gas-powered cars to electric drive. \\
+  \textit{Positions held}: Technical team member, business team member, webmaster
 
   \subsection*{Relevent Coursework}
 
-  \begin{multicols}{2} \raggedright
+  \begin{multicols}{2} 
+    \raggedright
 
     \begin{itemize}
     \item \textit{Math}: Calculus I, II, III, Discrete Math, Differential
@@ -138,24 +142,25 @@
 
   \section*{Relevent Skills}
 
-  \begin{multicols}{2} \raggedright
+  \begin{multicols}{2}
+    \raggedright
 
-  \subsection*{Web Frameworks and Web Technologies}
+    \subsection*{Web Frameworks and Web Technologies}
 
-  Spring, AngularJS, Grails, X/HTML, XML, XForms, CSS, Relational Databases
+    Spring, AngularJS, Grails, X/HTML, XML, XForms, CSS, Relational Databases
+    
+    \subsection*{Tools/Operating Systems}
 
-  \subsection*{Tools/Operating Systems}
+    Emacs, Eclipse, IntelliJ, Subversion, Git, Perforce, Linux, Mac OS X
 
-  Emacs, Eclipse, IntelliJ, Subversion, Git, Perforce, Linux, Mac OS X
+    \subsection*{Programming Languages}
 
-  \subsection*{Programming Languages}
-
-  \textsl{Expert}: Java \\
-  \textsl{Proficient}: Bash, Javascript, SQL, Groovy, \LaTeX \\
-  \textsl{Familiarity}: C, \CC, MATLAB/Octave, gnuplot, Ceylon
-
-\end{multicols}
-
+    \textsl{Expert}: Java \\
+    \textsl{Proficient}: Bash, Javascript, SQL, Groovy, \LaTeX \\
+    \textsl{Familiarity}: C, \CC, MATLAB/Octave, gnuplot, Ceylon
+    
+  \end{multicols}
+  
 % -------------------------- SECTION: EXPERIENCE -------------------------------
 
 \section*{Experience}
@@ -175,6 +180,8 @@
       Technologies: Java EE6, Spring MVC, JAXB, XFORMS, MyBatis, Grails,
       AngularJS
 
+%  maybe one day I'll use these sweet tags? Still needs more work.
+%
 %      \begin{tikzpicture}[tag/.style={fill=blue!20,draw=blue!80,rounded corners}]
 %        \node (a) [tag] {Java EE6};
 %        \node (b) [tag, right=of a] {Spring};
@@ -186,8 +193,7 @@
 %        \node (h) [tag, right=of g] {AngularJS};
 %      \end{tikzpicture}
 
-    \item \textit{Website development at Cigna \hfill Nov 2011 -- July}
-      2012
+    \item \textit{Website development at Cigna \hfill Nov 2011 -- July 2012}
 
       Member of a two-person team working on an internal application for viewing
       customer information. Also introduced and presented programming best
@@ -197,9 +203,9 @@
 
     \item \textit{Website development at Kohl's \hfill Aug 2011 -- Nov 2011}
 
-      Helped to revive and stabilize an old code base meant for kiosk machines
-      (touch computers in shopping malls). Ported new functionality from the
-      main website to the kiosk website. Implemented new UI features as
+      Took over development on a website meant for use on kiosk machines
+      (i.e. touch computers in shopping malls). Ported new functionality from
+      the desktop website to the kiosk website. Implemented new UI features as
       requested by a UI requirements team.
 
       Technologies: Java EE4, Starteam, IntelliJ, JSP
