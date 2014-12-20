@@ -10,4 +10,4 @@ How to compile
 
 `pdflatex chris_clark.tex`
 
-On Ubuntu, compilation requires the `texlive` and `texlive-latex-extra` packages to be instaled.
+On Ubuntu, compilation requires the `texlive` and `texlive-latex-extra` packages to be installed.
