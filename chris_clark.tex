@@ -53,7 +53,7 @@
 % set the format for subsections (from titlesec)
 \titleformat{\subsection} % the sectioning command to be redefined
             [hang] % shape
-            {\bfseries\sffamily} % format to be applied
+            {\bfseries} % format to be applied
             {\thesubsection} % label
             {0pt} % sep
             {} % before code
@@ -100,9 +100,9 @@
 
 % note: not using the \maketitle command. We make our own title our own way.
 \begin{center}
-  {\sffamily \huge \textbf{Chris Clark}} \\ 
+  {\sffamily \huge \textbf{Chris Clark}} \\
   Frederick, MD \enspace\textopenbullet\enspace
-  (571) 732-9827 \enspace\textopenbullet\enspace
+  https://github.com/Ludachrispeed \enspace\textopenbullet\enspace
   ludachrispeed@gmail.com
 \end{center}
 
@@ -121,7 +121,7 @@
 %  gas-powered cars to electric drive. \\
 %  \textit{Positions held}: Technical team member, business team member, webmaster
 
-  \begin{multicols}{3} 
+  \begin{multicols}{3}
     \raggedright
 
     \begin{itemize}
@@ -146,7 +146,7 @@
 
     \subsection*{Programming Languages}
 
-    Java, Scala, Javascript, Bash, SQL, \LaTeX, C, \CC, MATLAB/Octave, Gnuplot, Groovy, Ceylon
+    Python, Go, Javascript, Java, Bash, Fish, SQL, \LaTeX, C, \CC, MATLAB/Octave, Gnuplot, Groovy
 
     \subsection*{Dev Ops}
 
@@ -160,24 +160,30 @@
     Grails, XML, relational databases, node.js, npm
 
     \textsl{Frontend}: HTML5, angularJS, CSS, less, SCSS, bower, grunt, gulp
-    
-    
+
+
   \end{multicols}
-  
+
 % -------------------------- SECTION: EXPERIENCE -------------------------------
 
 \vspace{-9pt}
 \section*{Experience}
 
+\subsection*{Automation Engineer at Fugue}
+\vskip -20pt
+\hfill \textit{August 2015 -- Present}
+
+Developed test harness and tooling for Fugue.
+
 \subsection*{Web Developer at Wells Fargo}
 \vskip -20pt
-\hfill \textit{February 2015 -- Present}
+\hfill \textit{February 2015 -- August 2015}
 
 Member of a small team creating an internal auditing and task-tracking application.
 
 Technologies: Java, Spring, Hibernate, YUI, Javascript
 
-\subsection*{Startup Entrepreneur and Chief Software Developer/Architect} 
+\subsection*{Startup Entrepreneur and Chief Software Developer/Architect}
 \vskip -20pt
 \hfill \textit{May 2014 -- Present}
 
@@ -249,8 +255,6 @@ MySQL, bash, \LaTeX
   \begin{itemize}
     \item Designed, created, and maintain \texttt{http://lenaclarklegal.com} for my wife's legal
       practice (deployed on AWS).
-    \item Volunteer contributor to CommonAccord, a free and open source legal document generation
-      software
     \item UVA Varsity Cross Country, Track \& Field \hfill \textit{2006--2008}
   \end{itemize}
 
