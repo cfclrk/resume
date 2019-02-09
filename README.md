@@ -1,19 +1,26 @@
-Résumé
-======
+My résumé.
 
-All source is in one file: `chris_clark.tex`, which uses the `article` documentclass. Although
-people have attempted to make 'resume' document classes, I found those to be rather constricting and
-overly complex. It's pretty straightforward to simply use the `article` documentclass.
+All source is in one file: `chris_clark.tex`, which uses the `article`
+documentclass. People have attempted making "resume" documentclasses, but I
+found those to be rather constricting and overly complex. It's pretty
+straightforward to just use the `article` documentclass.
 
-How to compile
---------------
+Dependencies
+------------
 
-`pdflatex chris_clark.tex`
+Packages which are not included in the `basictex` distribution (i.e. `brew cask
+install basictex` on MacOS). Install a package with `tlmgr install
+<package-name>`.
 
-On Ubuntu, compilation requires the `texlive` and `texlive-latex-extra` packages to be installed.
+  - titlesec
+
+Create PDF
+----------
+
+    pdflatex chris_clark.tex
 
 Feedback
 --------
 
-Please feel free to open an issue, even if it's just a comment or suggestion. I always love
-discussing how to design things better.
+Please feel free to open an issue, even if it's just a comment or suggestion. I
+always love discussing how to design things better.
