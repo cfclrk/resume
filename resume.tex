@@ -1,10 +1,4 @@
-% Uses the "article" documentclass. Sections are redefined using the titlesec
-% package (giving them a margin farther left than the other text, and giving
-% them a horizontal rule under the section title)
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Preamble %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 
 \usepackage{textcomp}       % bullet symbol
 \usepackage{titlesec}       % defining formats for section headings
@@ -21,30 +15,28 @@
 %\usepackage{tikz}
 %\usetikzlibrary{positioning}
 
-% defines '\CC' as a command to render 'C++' nicely
-\newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf
-    +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
+% Defines "\CC" as a command to typeset "C++" nicely
 \def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
 
-% sets the kind of bullet to use in bulleted lists
+% Bullet style in bulleted lists
 \renewcommand{\labelitemi}{\textopenbullet}
 
-% amount of space before paragraphs
+% Amount of space before paragraphs
 \parskip 5pt
 
-% amount of space before and after a multicols environment
+% Amount of space before and after a multicols environment
 \multicolsep 5pt
 
-% don't indent the first line of a paragraph
+% Don't indent the first line of a paragraph
 \parindent 0pt
 
-% configure how hyperlinks look
+% Hyperlink configuration
 \hypersetup{
   colorlinks=true,
   linkcolor=red
 }
 
-% set the format for sections (this behavior comes from the titlesec package)
+% Section format (this behavior comes from the titlesec package)
 \titleformat{\section} % the sectioning command to be redefined
             [hang] % shape
             {\sffamily} % format to be applied
@@ -53,33 +45,33 @@
             {\Large} % before code
             [\titlerule{}] % after code
 
-% set the format for subsections (from titlesec)
+% Subsection format (from titlesec)
 \titleformat{\subsection} % the sectioning command to be redefined
-            [hang] % shape
-            {\bfseries} % format to be applied
+            [frame] % shape
+            {\large\bfseries} % format to be applied
             {\thesubsection} % label
             {0pt} % sep
             {} % before code
             [] % after code
 
-% defines spacing for sections (moves sections 15pts into the left margin)
+% Section spacing (moves sections 15pts into the left margin)
 \titlespacing*{\section} % the sectioning command
               {-15pt} % left
               {0pt} % before-sep
               {5pt} % after-sep
               [0pt] % right-sep
 
-% defines spacing for subsections
+% Subsection spacing
 \titlespacing*{\subsection} % the sectioning command
               {0pt} % left
               {0pt} % before-sep
               {2pt} % after-sep
               [0pt] % right-sep
 
-% remove page number at bottom of page
+% Remove page number at bottom of page
 \thispagestyle{empty}
 
-% adjust spacing in enumerate environment
+% Adjust spacing in enumerate environment
 \makeatletter
 \AtBeginDocument {
   \renewcommand{\@listi} {
@@ -101,13 +93,23 @@
 
 \begin{document}
 
-% note: not using the \maketitle command. We make our own title our own way.
+% Not using the \maketitle command. We make our own title our own way.
 \begin{center}
-  {\sffamily \huge \textbf{Chris Clark}} \\
-  Frederick, MD \enspace\textopenbullet\enspace
-  https://github.com/cfclrk \enspace\textopenbullet\enspace
-  cfclrk@gmail.com
+  {\sffamily\huge\textbf{Chris Clark}}
 \end{center}
+
+I have a passion for programming, designing systems, and learning with people. I
+help teams to be productive through clarity, vision, and teamwork.
+
+Frederick, MD
+cfclrk@gmail.com
+571-732-9827
+
+GitHub https://github.com/cfclrk
+
+StackExchange https://stackexchange.com/users/136833/chris-clark
+
+LinkedIn https://www.linkedin.com/in/chrisfrankclark
 
 \vspace{-9pt}
 
@@ -124,15 +126,16 @@
 
     Languages: Python, Bash, Clojure, Javascript/node.js, Go
 
-    Tools and Such: Git, Docker, Ansible
+    Other: Git, Docker, Ansible
 
     \subsection*{Worked with in the Past}
 
     Languages: Java (and friends, like Spring, Hibernate, JBoss tools), Rust,
     \LaTeX, C, \CC, MATLAB/Octave, CSS/LESS/SASS,, Groovy, SQL
 
-    Tools and Such: Web frameworks (angularJS, vue.js, react), Gnuplot,
+    Other: Various web frameworks (angularJS, vue.js, react), Gnuplot,
     Subversion
+
     \vfill
     \columnbreak
 
@@ -140,12 +143,9 @@
 
 % -------------------------- SECTION: EXPERIENCE -------------------------------
 
-\vspace{-9pt}
 \section*{Experience}
 
-\subsection*{Automation Engineer at Fugue}
-\vskip -20pt
-\hfill \textit{August 2015 -- Present}
+\subsection*{QA Engineer at Fugue \hfill Aug 2015 -- Jan 2019}
 
 Developed a test harness and internal tooling using Python, Go, AWS, and Azure.
 Some examples:
@@ -158,45 +158,40 @@ Some examples:
 \item Azure VM tool in Go
 \end{itemize}
 
-\subsection*{Web Developer at Wells Fargo}
-\vskip -20pt
-\hfill \textit{February 2015 -- August 2015}
+\subsection*{Web Developer at Wells Fargo \hfill Feb 2015 -- Aug 2015}
 
-Member of a small team creating an internal auditing and task-tracking application.
+Member of a small team creating an internal auditing and task-tracking
+application.
 
 Technologies: Java, Spring, Hibernate, YUI, Javascript
 
-\subsection*{Startup Entrepreneur and Chief Software Developer/Architect}
-\vskip -20pt
-\hfill \textit{May 2014 -- Present}
+\subsection*{Startup Entrepreneur \hfill May 2014 -- Aug 2015}
 
 \begin{itemize}
+  \item \textit{CXOzone}: Partnered with a small team of entrepreneurs to create
+    a web application pairing high-level executives with new opportunities. See
+    \texttt{http://cxo.zone}.
 
-  \vskip 5pt
-  \item \textit{CXOzone}: Partnered with a small team of entrepreneurs to create a web application
-    pairing high-level executives with new opportunities. See \texttt{http://cxo.zone}.
-
-  \item \textit{CarrotMD}: Multi-user web application which maintains an audit trail of
-    communications between doctors, patients, nurses, and call centers. Built for small medical
-    clinics. More info upon request.
-
+  \item \textit{CarrotMD}: Multi-user web application which maintains an audit
+    trail of communications between doctors, patients, nurses, and call centers.
+    Built for small medical clinics. More info upon request.
 \end{itemize}
 
-Technologies: node.js, express, AngularJS, SailsJS, Docker, MongoDB, Java 8, Spring, Hibernate,
-MySQL, bash, \LaTeX
+Technologies: node.js, express, AngularJS, SailsJS, Docker, MongoDB, Java 8,
+Spring, Hibernate, MySQL, bash, \LaTeX
 
-\subsection*{Consultant for Red Hat Consulting}
+\subsection*{Consultant at Red Hat \hfill Aug 2011 -- May 2014}
 
-  \vskip 5pt
   \begin{itemize}
 
-    \item \textit{Website Development at GEICO \hfill Aug 2012 -- May 2014}
+    \item \textit{Web Development at GEICO \hfill Aug 2012 -- May 2014}
 
-      Maintained RESTful web services ultimately consumed by mobile devices. Also helped to develop
-      an internal metrics-tracking and error-tracking application using Grails and AngularJS.
+      Maintained RESTful web services ultimately consumed by mobile devices.
+      Also helped to develop an internal metrics-tracking and error-tracking
+      application using Grails and AngularJS.
 
-      Technologies: Java 6, Spring MVC, JBoss AS, JAXB, jBPM, XForms, Hibernate, MyBatis, Grails,
-      AngularJS
+      Technologies: Java 6, Spring MVC, JBoss AS, JAXB, jBPM, XForms, Hibernate,
+      MyBatis, Grails, AngularJS
 
 %  maybe one day I'll use these sweet tags? Still needs more work.
 %
@@ -211,18 +206,19 @@ MySQL, bash, \LaTeX
 %        \node (h) [tag, right=of g] {AngularJS};
 %      \end{tikzpicture}
 
-    \item \textit{Website development at Cigna \hfill Nov 2011 -- July 2012}
+    \item \textit{Web Development at Cigna \hfill Nov 2011 -- July 2012}
 
-      Member of a two-person team working on an internal application for viewing customer
-      information. Also introduced and presented programming best practices to other software
-      developers.
+      Member of a two-person team working on an internal application for viewing
+      customer information. Also introduced and presented programming best
+      practices to other software developers.
 
       Technologies: Java 6, JBoss Drools, Spring Framework, iBATIS
 
-    \item \textit{Website development at Kohl's \hfill Aug 2011 -- Nov 2011}
+    \item \textit{Web Development at Kohl's \hfill Aug 2011 -- Nov 2011}
 
-      Sole developer in charge of porting functionality from the desktop website to a website
-      running on kiosk machines. Implemented new UI features as requested by a UI requirements team.
+      Sole developer in charge of porting functionality from the desktop website
+      to a website running on kiosk machines. Implemented new UI features as
+      requested by a UI requirements team.
 
       Technologies: Java 4, Starteam, IntelliJ, JSP
 
@@ -237,18 +233,12 @@ MySQL, bash, \LaTeX
   Charlottesville, VA \\
   \textit{B.S. in Computer Science, May 2011}
 
-%  \subsection*{Activities}
-%
-%  \textit{RideForward}: A UVA-based group of students and professors converting
-%  gas-powered cars to electric drive. \\
-%  \textit{Positions held}: Technical team member, business team member, webmaster
-
   \begin{multicols}{3}
     \raggedright
 
     \begin{itemize}
-    \item \textit{Math}: Calculus II, III, Discrete Math, Differential Equations, Probability,
-      Linear Algebra
+    \item \textit{Math}: Calculus II, III, Discrete Math, Differential
+      Equations, Probability, Linear Algebra
     \item Computer Networks
     \item Operating Systems
     \item Digital Logic Design
@@ -263,13 +253,14 @@ MySQL, bash, \LaTeX
 % ---------------------- SECTION: OTHER SKILLS/HOBBIES -------------------------
 
 \vskip 4pt
-\section*{Other Skills/Hobbies}
-\vskip 5pt
+\section*{Outside of Work?}
+
+I enjoy family time, quiet time, and doing CrossFit or any kind of sports.
 
   \begin{itemize}
-    \item Designed, created, and maintain \texttt{http://lenaclarklegal.com} for my wife's legal
-      practice (deployed on AWS).
-    \item UVA Varsity Cross Country, Track \& Field \hfill \textit{2006--2008}
+    \item I designed, created, and maintain \texttt{http://lenaclarklegal.com}
+      for my wife's legal practice (deployed on AWS)
+    \item UVA Varsity Cross Country, Track \& Field
   \end{itemize}
 
 \end{document}
