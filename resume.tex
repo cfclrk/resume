@@ -1,18 +1,20 @@
 \documentclass[12pt]{article}
 
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
 \usepackage{fontawesome}         % icons
 \usepackage[
   left=0.5in,
   right=0.5in,
   top=0.4in,
   bottom=0.4in]{geometry}        % page dimensions
-\usepackage[utf8]{inputenc}      % define the source encoding
-\usepackage{hyperref}            % hyperlinks
 \usepackage{multicol}            % multi-column environments
 \usepackage{textcomp}            % bullet symbol
 \usepackage{tcolorbox}           % color boxes using tikz
 \usepackage[explicit]{titlesec}  % formats for section headings
 \usepackage{xcolor}              % sweet colors
+\usepackage{hyperref}            % hyperlinks; this should be last
 
 % Defines "\CC" as a command to typeset "C++" nicely
 \def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
@@ -29,11 +31,15 @@
 % Don't indent the first line of a paragraph
 \parindent 0pt
 
+% No page numbers
+\pagestyle{empty}
+
 % Hyperlink configuration
 \hypersetup{
   colorlinks=true,
-  linkcolor=red
+  urlcolor=blue!80!black,
 }
+\bfseries\urlstyle{tt}
 
 % Section format (this behavior comes from the titlesec package)
 \titleformat{\section} % the sectioning command to be redefined
@@ -98,7 +104,7 @@
   bottom=2pt,
   left=6pt,
   right=6pt,
-  before upper={\rule[-3pt]{0pt}{10pt}},
+  before upper={\rule[-2pt]{0pt}{12pt}},
   colframe=green!50!black,
   colback=green!20!white}
 
@@ -119,12 +125,12 @@
 \begin{tcolorbox}[
     topbar,
     width=(\linewidth-2mm)/2,
-    coltext=violet,
+    coltext=black!60,
     colback=white,
     halign=left,
-    fontupper=\itshape\large]
-  I have a passion for programming, designing systems, and learning with people.
-  I help teams to be productive through clarity, vision, and teamwork.
+    fontupper=\itshape\bfseries\large]
+  ``I have a passion for programming, designing systems, and learning with
+  people. I help teams to be productive through clarity, vision, and teamwork.''
 \end{tcolorbox}
 \begin{tcolorbox}[
     topbar,
@@ -133,9 +139,9 @@
   \begin{tabular}{r l}
     \faEnvelope\      & \texttt{cfclrk@gmail.com} \\
     \faPhone\         & \texttt{571-732-9827} \\
-    \faGithub\        & \texttt{github.com/cfclrk} \\
-    \faStackOverflow\ & \texttt{stackoverflow.com/u/340613} \\
-    \faLinkedin\      & \texttt{linkedin.com/in/cfclrk} \\
+    \faGithub\        & \url{http://github.com/cfclrk} \\
+    \faStackOverflow\ & \url{http://stackoverflow.com/u/340613} \\
+    \faLinkedin\      & \url{http://linkedin.com/in/cfclrk} \\
   \end{tabular}
 \end{tcolorbox}
 
@@ -148,18 +154,18 @@
 
   \subsection*{Most Recent and Familiar}
 
-  Cloud Stuff: AWS, Azure, Terraform
+  \textbf{Cloud Stuff}: AWS, Azure, Terraform
 
-  Languages: Python, Bash, Clojure, Javascript, Go
+  \textbf{Languages}: Python, Bash, Clojure, Javascript, Go
 
-  Other: Git, Docker, Packer, Ansible
+  \textbf{Other}: Git, Docker, GNU Make, Packer, Ansible
 
   \subsection*{Worked with in the Past}
 
-  Languages: Java, Rust, \LaTeX, C, \CC, MATLAB/Octave, CSS/LESS/SASS, Groovy,
-  SQL
+  \textbf{Languages}: Java, Rust, \LaTeX, C, \CC, MATLAB/Octave, CSS/LESS/SASS,
+  Groovy, SQL
 
-  Other: Various web frameworks (AngularJS, Vue.js), Gnuplot, Subversion
+  \textbf{Other}: AngularJS, Vue.js, Webpack, Gnuplot, Subversion
 
   \vfill
   \columnbreak
@@ -181,13 +187,12 @@ general-purpose internal tooling.
 \item Helped to design, create, and maintain an end-to-end test harness for
   Fugue (mostly Python, Bash, and Fugue's functional language Ludwig)
 \item Wrote an internal tool for clearing AWS accounts (Python)
-\item Designed and implemented a system for creating VM images in AWS (Ansible
+\item Designed and implemented a system for creating test VM's in AWS (Ansible
   and Packer)
-\item Designed and implemented an Azure VM tool using Azure Resource Manager
-  templates (Go)
+\item Created an Azure VM tool using Azure Resource Manager templates (Go)
 \item Created and maintained many continuous-integration builds in Travis and
   Concourse
-\item Came up with literate-programming system for documenting tests using
+\item Devised a literate-programming approach for documenting tests using
   org-mode (Emacs, Bash)
 \item Created and maintained a general-purpose tool for important internal
   tasks, which drastically simplified everybody's life (Python)
@@ -208,15 +213,16 @@ application.
 Mainly focused on two business ventures:
 
 \begin{itemize}
-  \item Partnered with a small team of entrepreneurs to create a web application
+  \item Partnered with a small team of entrepreneurs creating an application for
     pairing high-level executives with new opportunities.
 
-  \item Worked with a medical clinic to create a multi-user web application
-    which maintains an audit trail of communications between doctors, patients,
+  \item Worked with a medical clinic to create a multi-user web application that
+    maintained an audit trail of communications between doctors, patients,
     nurses, and call centers.
 \end{itemize}
 
-\tag{MEAN stack} \tag{docker} \tag{Java 8} \tag{MySQL} \tag{Bash} \tag{\LaTeX}
+\tag{MEAN stack} \tag{docker} \tag{Java 8} \tag{Scala} \tag{MySQL} \tag{Bash}
+\tag{\LaTeX}
 
 \subsection*{Consultant at Red Hat \hfill Aug 2011 -- May 2014}
 
@@ -232,22 +238,20 @@ Mainly focused on two business ventures:
 
     \item \textit{Cigna \hfill Nov 2011 -- July 2012}
 
-      Member of a two-person team brought in to help overcome difficulties using
-      a rules engine for an internal application for deducing customer
-      information.
+      Member of a two-person team helping to use a rules engine to deduce
+      customer information for an internal application.
 
       \tag{Java 6} \tag{JBoss Drools}
 
     \item \textit{Kohl's \hfill Aug 2011 -- Nov 2011}
 
-      Sole developer in charge of porting functionality from the desktop site to
+      Sole developer in charge of porting functionality from the main website to
       a website for kiosk machines. Also implemented new UI features as
       requested by a UI requirements team.
 
       \tag{Java 4} \tag{JSP}
 
   \end{itemize}
-
 
 % --------------------------- SECTION: EDUCATION -------------------------------
 
@@ -273,19 +277,18 @@ Mainly focused on two business ventures:
     \end{itemize}
   \end{multicols}
 
-
 % ---------------------- SECTION: OTHER SKILLS/HOBBIES -------------------------
 
-\vskip 4pt
 \section*{Outside of Work}
 
 I enjoy family time, quiet time, reading, learning. and doing CrossFit or any
 kind of sports.
 
 \begin{itemize}
-\item I designed, created, and maintain \texttt{http://lenaclarklegal.com} for
-  my wife's legal practice (deployed on AWS)
-\item UVA Varsity Cross Country, Track \& Field
+\item At UVA I ran varsity Cross Country, Track \& Field; I try to moderately
+  keep up with running.
+\item I designed, created, and maintain \url{http://lenaclarklegal.com} for my
+  wife's legal practice (deployed on AWS)
 \end{itemize}
 
 \end{document}
