@@ -1,22 +1,18 @@
 \documentclass[12pt]{article}
 
+\usepackage{fontawesome}         % icons
 \usepackage[
   left=0.5in,
   right=0.5in,
   top=0.4in,
-  bottom=0.4in]{geometry}   % page dimensions
-
-\usepackage{hyperref}       % hyperlinks
-\usepackage{multicol}       % multi-column environments
-\usepackage{textcomp}       % bullet symbol
-\usepackage{tcolorbox}      % color boxes using tikz
-\usepackage[explicit]{titlesec}       % defining formats for section headings
-\usepackage{xcolor}
-
-% TODO: I'm not using these sweet tags, but I'm saving the code it case I do
-% sometime. They don't really look good yet.
-%\usepackage{tikz}
-%\usetikzlibrary{positioning}
+  bottom=0.4in]{geometry}        % page dimensions
+\usepackage[utf8]{inputenc}      % define the source encoding
+\usepackage{hyperref}            % hyperlinks
+\usepackage{multicol}            % multi-column environments
+\usepackage{textcomp}            % bullet symbol
+\usepackage{tcolorbox}           % color boxes using tikz
+\usepackage[explicit]{titlesec}  % formats for section headings
+\usepackage{xcolor}              % sweet colors
 
 % Defines "\CC" as a command to typeset "C++" nicely
 \def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
@@ -67,7 +63,7 @@
 % Subsection spacing
 \titlespacing*{\subsection} % the sectioning command
               {0pt} % left
-              {0pt} % before-sep
+              {10pt} % before-sep
               {2pt} % after-sep
               [0pt] % right-sep
 
@@ -83,7 +79,7 @@
     \setlength{\partopsep}{5pt}
     \setlength{\parskip}{0pt}
     \setlength{\topsep}{0pt}
-    \setlength{\leftmargin}{15pt}
+    \setlength{\leftmargin}{30pt}
   }
   \renewcommand{\@listii} {
     \setlength{\itemsep}{5pt}
@@ -91,6 +87,20 @@
   }
 }
 \makeatother
+
+% Tag style
+\newtcbox{\tag}{
+  on line,
+  arc=7pt,
+  boxrule=1pt,
+  boxsep=0pt,
+  top=2pt,
+  bottom=2pt,
+  left=6pt,
+  right=6pt,
+  before upper={\rule[-3pt]{0pt}{10pt}},
+  colframe=green!50!black,
+  colback=green!20!white}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Text %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -102,7 +112,6 @@
 \end{center}
 
 \tcbset{topbar/.style={
-    colback=green!20!white,
     equal height group=Topbar,
     frame empty,
     nobeforeafter}}
@@ -111,21 +120,23 @@
     topbar,
     width=(\linewidth-2mm)/2,
     coltext=violet,
+    colback=white,
     halign=left,
-    fontupper=\itshape\bfseries\sffamily\large]
+    fontupper=\itshape\large]
   I have a passion for programming, designing systems, and learning with people.
   I help teams to be productive through clarity, vision, and teamwork.
 \end{tcolorbox}
-\begin{tcolorbox}[topbar,width=(\linewidth-2mm)/2]
-  cfclrk@gmail.com
-
-  571-732-9827
-
-  https://github.com/cfclrk
-
-  https://stackoverflow.com/users/340613
-
-  https://www.linkedin.com/in/chrisfrankclark
+\begin{tcolorbox}[
+    topbar,
+    width=(\linewidth-2mm)/2,
+    colback=yellow!20!white]
+  \begin{tabular}{r l}
+    \faEnvelope\      & \texttt{cfclrk@gmail.com} \\
+    \faPhone\         & \texttt{571-732-9827} \\
+    \faGithub\        & \texttt{github.com/cfclrk} \\
+    \faStackOverflow\ & \texttt{stackoverflow.com/u/340613} \\
+    \faLinkedin\      & \texttt{linkedin.com/in/cfclrk} \\
+  \end{tabular}
 \end{tcolorbox}
 
 % ------------------------ SECTION: RELEVENT SKILLS ----------------------------
@@ -139,17 +150,16 @@
 
   Cloud Stuff: AWS, Azure, Terraform
 
-  Languages: Python, Bash, Clojure, Javascript/node.js, Go
+  Languages: Python, Bash, Clojure, Javascript, Go
 
   Other: Git, Docker, Packer, Ansible
 
   \subsection*{Worked with in the Past}
 
-  Languages: Java (and Spring, Hibernate, JBoss, etc.), Rust, \LaTeX, C, \CC,
-  MATLAB/Octave, CSS/LESS/SASS, Groovy, SQL
+  Languages: Java, Rust, \LaTeX, C, \CC, MATLAB/Octave, CSS/LESS/SASS, Groovy,
+  SQL
 
-  Other: Various web frameworks (angularJS, vue.js, react), Gnuplot,
-  Subversion
+  Other: Various web frameworks (AngularJS, Vue.js), Gnuplot, Subversion
 
   \vfill
   \columnbreak
@@ -160,87 +170,81 @@
 
 \section*{Experience}
 
-\subsection*{QA Engineer at Fugue \hfill Aug 2015 -- Jan 2019}
+\subsection*{QA Engineer at Fugue \hfill Jul 2015 -- Jan 2019}
 
-Developed a test harness and internal tooling using Python, Go, AWS, and Azure.
-Some examples:
+The QA team was in charge of designing and implementing a test harness for Fugue
+(which was a platform for defining, creating, and monitoring infrastructure in
+AWS and Azure). I created much of this system, as well as a variety of
+general-purpose internal tooling.
 
 \begin{itemize}
 \item Helped to design, create, and maintain an end-to-end test harness for
-  Fugue
+  Fugue (mostly Python, Bash, and Fugue's functional language Ludwig)
 \item Wrote an internal tool for clearing AWS accounts (Python)
-\item Designed and implemented a system for creating test VM images in AWS using
-  Ansible and Packer
+\item Designed and implemented a system for creating VM images in AWS (Ansible
+  and Packer)
 \item Designed and implemented an Azure VM tool using Azure Resource Manager
   templates (Go)
 \item Created and maintained many continuous-integration builds in Travis and
   Concourse
-\item qatool
+\item Came up with literate-programming system for documenting tests using
+  org-mode (Emacs, Bash)
+\item Created and maintained a general-purpose tool for important internal
+  tasks, which drastically simplified everybody's life (Python)
 \end{itemize}
 
-\subsection*{Web Developer at Wells Fargo \hfill Feb 2015 -- Aug 2015}
+\tag{AWS} \tag{Azure} \tag{Python} \tag{Bash} \tag{Clojure} \tag{Go}
+\tag{Ansible} \tag{Packer}
+
+\subsection*{Web Developer at Wells Fargo \hfill Feb 2015 -- Jul 2015}
 
 Member of a small team creating an internal auditing and task-tracking
 application.
 
-Technologies: Java, Spring, Hibernate, YUI, Javascript
+\tag{Java} \tag{Spring} \tag{Hibernate} \tag{YUI} \tag{Javascript}
 
 \subsection*{Startup Entrepreneur \hfill May 2014 -- Aug 2015}
 
-\begin{itemize}
-  \item \textit{CXOzone}: Partnered with a small team of entrepreneurs to create
-    a web application pairing high-level executives with new opportunities. See
-    \texttt{http://cxo.zone}.
+Mainly focused on two business ventures:
 
-  \item \textit{CarrotMD}: Multi-user web application which maintains an audit
-    trail of communications between doctors, patients, nurses, and call centers.
-    Built for small medical clinics. More info upon request.
+\begin{itemize}
+  \item Partnered with a small team of entrepreneurs to create a web application
+    pairing high-level executives with new opportunities.
+
+  \item Worked with a medical clinic to create a multi-user web application
+    which maintains an audit trail of communications between doctors, patients,
+    nurses, and call centers.
 \end{itemize}
 
-Technologies: node.js, express, AngularJS, SailsJS, Docker, MongoDB, Java 8,
-Spring, Hibernate, MySQL, bash, \LaTeX
+\tag{MEAN stack} \tag{docker} \tag{Java 8} \tag{MySQL} \tag{Bash} \tag{\LaTeX}
 
 \subsection*{Consultant at Red Hat \hfill Aug 2011 -- May 2014}
 
   \begin{itemize}
 
-    \item \textit{Web Development at GEICO \hfill Aug 2012 -- May 2014}
+    \item \textit{GEICO \hfill Aug 2012 -- May 2014}
 
-      Maintained RESTful web services ultimately consumed by mobile devices.
-      Also helped to develop an internal metrics-tracking and error-tracking
-      application using Grails and AngularJS.
+      Maintained various web services and site features. Also helped to create
+      an internal error-tracking application using Grails and AngularJS.
 
-      Technologies: Java 6, Spring MVC, JBoss AS, JAXB, jBPM, XForms, Hibernate,
-      MyBatis, Grails, AngularJS
+      \tag{Java 6} \tag{JBoss} \tag{jBPM} \tag{Hibernate} \tag{MyBatis}
+      \tag{Grails} \tag{AngularJS}
 
-%  maybe one day I'll use these sweet tags? Still needs more work.
-%
-%      \begin{tikzpicture}[tag/.style={fill=blue!20,draw=blue!80,rounded corners}]
-%        \node (a) [tag] {Java 6};
-%        \node (b) [tag, right=of a] {Spring};
-%        \node (c) [tag, right=of b] {JAXB};
-%        \node (d) [tag, right=of c] {XForms};
-%        \node (e) [tag, right=of d] {JAXB};
-%        \node (f) [tag, right=of e] {MyBatis};
-%        \node (g) [tag, right=of f] {Grails};
-%        \node (h) [tag, right=of g] {AngularJS};
-%      \end{tikzpicture}
+    \item \textit{Cigna \hfill Nov 2011 -- July 2012}
 
-    \item \textit{Web Development at Cigna \hfill Nov 2011 -- July 2012}
+      Member of a two-person team brought in to help overcome difficulties using
+      a rules engine for an internal application for deducing customer
+      information.
 
-      Member of a two-person team working on an internal application for viewing
-      customer information. Also introduced and presented programming best
-      practices to other software developers.
+      \tag{Java 6} \tag{JBoss Drools}
 
-      Technologies: Java 6, JBoss Drools, Spring Framework, iBATIS
+    \item \textit{Kohl's \hfill Aug 2011 -- Nov 2011}
 
-    \item \textit{Web Development at Kohl's \hfill Aug 2011 -- Nov 2011}
-
-      Sole developer in charge of porting functionality from the desktop website
-      to a website running on kiosk machines. Implemented new UI features as
+      Sole developer in charge of porting functionality from the desktop site to
+      a website for kiosk machines. Also implemented new UI features as
       requested by a UI requirements team.
 
-      Technologies: Java 4, Starteam, IntelliJ, JSP
+      \tag{Java 4} \tag{JSP}
 
   \end{itemize}
 
@@ -273,7 +277,7 @@ Spring, Hibernate, MySQL, bash, \LaTeX
 % ---------------------- SECTION: OTHER SKILLS/HOBBIES -------------------------
 
 \vskip 4pt
-\section*{Outside of Work?}
+\section*{Outside of Work}
 
 I enjoy family time, quiet time, reading, learning. and doing CrossFit or any
 kind of sports.

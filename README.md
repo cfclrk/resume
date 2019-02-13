@@ -10,11 +10,12 @@ Dependencies
 
 Install with `tlmgr install <package-name>` if you don't have them:
 
-  - [tcolorbox](https://mirror.hmc.edu/ctan/macros/latex/contrib/tcolorbox/tcolorbox.pdf)
-  - [titlesec](http://tug.ctan.org/tex-archive/macros/latex/contrib/titlesec/titlesec.pdf)
+  - [fontawesome](https://ctan.org/pkg/fontawesome)
+  - [tcolorbox](https://ctan.org/pkg/tcolorbox)
+  - [titlesec](https://ctan.org/pkg/titlesec)
 
-`tcolorbox` has some dependencies that needed to be separately downloaded for me
-(oh... LaTeX).
+`tcolorbox` had some dependencies that I needed to download separately (oh...
+LaTeX).
   - `trimspaces`
   - `environ`
 
