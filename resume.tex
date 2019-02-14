@@ -5,8 +5,8 @@
 
 \usepackage{fontawesome}         % icons
 \usepackage[
-  left=0.5in,
-  right=0.5in,
+  left=0.6in,
+  right=0.6in,
   top=0.4in,
   bottom=0.4in]{geometry}        % page dimensions
 \usepackage{multicol}            % multi-column environments
@@ -118,13 +118,15 @@
 \end{center}
 
 \tcbset{topbar/.style={
-    equal height group=Topbar,
     frame empty,
+    box align=top,
+    width=(\linewidth-2mm)/2,
     nobeforeafter}}
 
 \begin{tcolorbox}[
     topbar,
-    width=(\linewidth-2mm)/2,
+    boxsep=1pt,
+    left=1pt,
     coltext=black!60,
     colback=white,
     halign=left,
@@ -134,8 +136,8 @@
 \end{tcolorbox}
 \begin{tcolorbox}[
     topbar,
-    width=(\linewidth-2mm)/2,
-    colback=yellow!20!white]
+    left=1pt,
+    colback=yellow!25!white]
   \begin{tabular}{r l}
     \faEnvelope\      & \texttt{cfclrk@gmail.com} \\
     \faPhone\         & \texttt{571-732-9827} \\
@@ -185,17 +187,17 @@ general-purpose internal tooling.
 
 \begin{itemize}
 \item Helped to design, create, and maintain an end-to-end test harness for
-  Fugue (mostly Python, Bash, and Fugue's functional language Ludwig)
-\item Wrote an internal tool for clearing AWS accounts (Python)
+  Fugue (mostly Python, Bash, and Fugue's functional language: Ludwig)
+\item Wrote an tool for clearing AWS accounts (Python)
 \item Designed and implemented a system for creating test VM's in AWS (Ansible
   and Packer)
 \item Created an Azure VM tool using Azure Resource Manager templates (Go)
 \item Created and maintained many continuous-integration builds in Travis and
   Concourse
-\item Devised a literate-programming approach for documenting tests using
-  org-mode (Emacs, Bash)
-\item Created and maintained a general-purpose tool for important internal
-  tasks, which drastically simplified everybody's life (Python)
+\item Devised a literate-programming approach for running and documenting tests
+  using org-mode (Emacs, Bash)
+\item Created general-purpose tool to automate a variety of important internal
+  tasks, drastically simpliflying everybody's life (Python)
 \end{itemize}
 
 \tag{AWS} \tag{Azure} \tag{Python} \tag{Bash} \tag{Clojure} \tag{Go}
@@ -281,14 +283,15 @@ Mainly focused on two business ventures:
 
 \section*{Outside of Work}
 
-I enjoy family time, quiet time, reading, learning. and doing CrossFit or any
-kind of sports.
+I enjoy family time, quiet time, reading, learning, and doing any kind of
+sports.
 
 \begin{itemize}
-\item At UVA I ran varsity Cross Country, Track \& Field; I try to moderately
-  keep up with running.
+\item As a former runner for the UVA varsity Track \& Field team, I try to
+  keep up with moderate running
 \item I designed, created, and maintain \url{http://lenaclarklegal.com} for my
   wife's legal practice (deployed on AWS)
+\item President of my local HOA
 \end{itemize}
 
 \end{document}
