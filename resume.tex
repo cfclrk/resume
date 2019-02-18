@@ -42,7 +42,7 @@
   urlcolor=blue!80!black,
 }
 
-% Section format (this behavior comes from the titlesec package)
+% Section header style (this behavior comes from the titlesec package)
 \titleformat{\section} % the sectioning command to be redefined
             [hang] % shape
             {\sffamily\color{red}} % format to be applied
@@ -51,13 +51,15 @@
             {\Large #1} % before code
             [\titlerule{}] % after code
 
-% Subsection format (from titlesec)
+% Subsection header style (from titlesec)
 \titleformat{\subsection} % the sectioning command to be redefined
             [hang] % shape
             {\large\bfseries} % format to be applied
             {\thesubsection} % label
             {0pt} % sep
-            {\begin{tcolorbox}[nobeforeafter]#1\end{tcolorbox}} % before code
+            { % before code
+              \begin{tcolorbox}[nobeforeafter]#1\end{tcolorbox}
+            }
             [] % after code
 
 % Section spacing (moves sections 15pts into the left margin)
