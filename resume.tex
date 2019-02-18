@@ -57,9 +57,7 @@
             {\large\bfseries} % format to be applied
             {\thesubsection} % label
             {0pt} % sep
-            { % before code
-              \begin{tcolorbox}[nobeforeafter]#1\end{tcolorbox}
-            }
+            {\begin{tcolorbox}[nobeforeafter]#1\end{tcolorbox}}  % before code
             [] % after code
 
 % Section spacing (moves sections 15pts into the left margin)
@@ -97,7 +95,7 @@
 }
 \makeatother
 
-% Tag style
+% Tag style (the green pillboxes used to list technologies)
 \newtcbox{\tag}{
   on line,
   arc=7pt,
