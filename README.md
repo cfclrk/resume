@@ -14,13 +14,8 @@ Install with `tlmgr install <package-name>` if you don't have them:
   - [tcolorbox](https://ctan.org/pkg/tcolorbox)
   - [titlesec](https://ctan.org/pkg/titlesec)
 
-`tcolorbox` had some dependencies that I needed to download separately (oh...
-LaTeX!):
-  - `trimspaces`
-  - `environ`
-
-Ensure that you have installed [cm-super](https://ctan.org/pkg/cm-super) in
-order to get the most out of the `\usepackage[T1]{fontenc}`.
+Also, ensure that you have installed [cm-super](https://ctan.org/pkg/cm-super),
+which provides _significantly_ improved fonts for the T1 font encoding.
 
 Create PDF
 ----------
