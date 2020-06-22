@@ -14,8 +14,9 @@ Install with `tlmgr install <package-name>` if you don't have them:
   - [tcolorbox](https://ctan.org/pkg/tcolorbox)
   - [titlesec](https://ctan.org/pkg/titlesec)
 
-Also, ensure that you have installed [cm-super](https://ctan.org/pkg/cm-super),
-which provides _significantly_ improved fonts for the T1 font encoding.
+Also, ensure that you have installed [cm-super](https://ctan.org/pkg/cm-super)
+(`tlmgr install cm-super`) which provides _significantly_ improved fonts for the
+T1 font encoding.
 
 Create PDF
 ----------
