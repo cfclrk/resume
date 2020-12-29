@@ -10,9 +10,10 @@ Dependencies
 
 Install with `tlmgr install <package-name>` if you don't have them:
 
-  - [fontawesome](https://ctan.org/pkg/fontawesome)
-  - [tcolorbox](https://ctan.org/pkg/tcolorbox)
-  - [titlesec](https://ctan.org/pkg/titlesec)
+- [fontawesome](https://ctan.org/pkg/fontawesome)
+- [tcolorbox](https://ctan.org/pkg/tcolorbox)
+- [titlesec](https://ctan.org/pkg/titlesec)
+- [environ](https://ctan.org/pkg/environ)
 
 Also, ensure that you have installed [cm-super](https://ctan.org/pkg/cm-super)
 (`tlmgr install cm-super`) which provides _significantly_ improved fonts for the
