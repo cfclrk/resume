@@ -189,14 +189,17 @@ team oversees cloud-related endeavors and also develops internal tooling. Some
 things that I personally worked on:
 
 \begin{itemize}
-\item I designed and implemented a new data-ingest pipeline that leverages AWS
+\item Designed and implemented a new data-ingest pipeline that leverages AWS
   managed services (like ALB, Kinesis, and ECS) in order to be more scalable and
   reliable than previous designs (for background: IronNet's flagship product
   ingests \textit{a lot} of data from customers).
 \item Created and improved automation for managing Kubernetes clusters and
   IronNet's applications running on Kubernetes.
-\item Helped to debug and fix various issues in deployments of Jenkins and
-  Harbor, as well as in various internal applications that our team managed
+\item Created an internal tool (API and a corresponding CLI) leveraging IXIA
+  BreakingPoint to send generated network traffic to various endpoints for
+  testing things.
+\item Helped to debug and fix various issues in internal deployments of Jenkins
+  and Harbor, as well as in various internal applications that our team managed
   (e.g. for creating AWS accounts, managing cross-account permissions, or
   generating network data for testing).
 \item Worked on getting IronNet's flagship product running in Azure.
