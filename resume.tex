@@ -161,16 +161,17 @@
 
   \subsection*{Most Recent and Familiar}
 
-  \textbf{Languages}: Python, Bash, Lisp
+  \textbf{Programming Languages}: Python, Bash, Lisp
 
-  \textbf{Other}: Kubernetes, Git, Docker, AWS, Azure, Terraform
+  \textbf{Tools and Services}: Kubernetes, Git, Docker, AWS, Azure, Terraform,
+  AWS CDK
 
   \subsection*{Worked with in the Past}
 
-  \textbf{Languages}: Go, Rust, Javascript, Java, Haskell, \LaTeX, C, \CC,
-  MATLAB/Octave, CSS/LESS/SASS, SQL
+  \textbf{Programming Languages}: Go, Rust, Javascript, Java, Haskell, \LaTeX,
+  C, \CC, MATLAB/Octave, CSS/LESS/SASS, SQL
 
-  \textbf{Other}: Ansible, Packer, Webpack
+  \textbf{Tools and Services}: Ansible, Packer, Webpack
 
   \vfill
   \columnbreak
@@ -192,10 +193,21 @@ things that I personally worked on:
 \item Designed and implemented a new data-ingest pipeline that leverages AWS
   managed services (like ALB, Kinesis, and ECS) in order to be more scalable and
   reliable than previous designs.
-\item Created and improved various internal tooling for things like: managing
-  Kubernetes clusters, deploying applications (usually to Kubernetes), creating
-  AWS accounts, maintaining cross-account permissions, generating test data,
-  leveraging AWS spot instances, and more.
+\item Created and improved various internal tooling (mostly in Python) for
+  things like:
+
+  \begin{multicols}{2}
+    \raggedright
+    \begin{itemize}
+    \item Managing Kubernetes clusters
+    \item Deploying applications (usually to Kubernetes)
+    \item Creating AWS accounts
+    \item Maintaining cross-account permissions
+    \item Generating test data
+    \item Leveraging AWS spot instances
+    \end{itemize}
+  \end{multicols}
+
 \end{itemize}
 
 \tag{Python} \tag{Go} \tag{Bash} \tag{Kubernetes} \tag{helm} \tag{AWS}
@@ -204,9 +216,9 @@ things that I personally worked on:
 \subsection*{QA Engineer at Fugue \hfill Jul 2015 -- Jan 2019}
 
 The QA team was in charge of designing and implementing a test harness for Fugue
-(which was a platform for defining, creating, and monitoring infrastructure in
-AWS and Azure). I created much of this system, as well as a variety of
-general-purpose internal tooling.
+(which at the time was a platform for defining, creating, and monitoring
+infrastructure in AWS and Azure, sort of like Terraform). I created much of this
+system, as well as a variety of general-purpose internal tooling.
 
 \begin{itemize}
 \item Helped design and create an end-to-end test harness for Fugue (Python,
