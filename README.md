@@ -22,7 +22,11 @@ T1 font encoding.
 Create PDF
 ----------
 
-    pdflatex resume.tex
+``` shell
+xelatex resume.tex
+```
+
+`pdflatex` works as well.
 
 Feedback
 --------
