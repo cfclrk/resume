@@ -3,7 +3,7 @@ My résumé.
 <img
     width="100"
     height="100"
-    src="https://gist.githubusercontent.com/cfclrk/fe97b1a7c33e42d3f90ab7fafd530fe4/raw/3cedf99ee506fb93366769763fae184492b1fb52/like_a_sir.png" />
+    src="https://user-images.githubusercontent.com/452309/174818847-dbf1133a-1dc7-4f09-98ab-f66fb10559b3.png" />
 
 Dependencies
 ------------
