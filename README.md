@@ -8,7 +8,7 @@ My résumé.
 Dependencies
 ------------
 
-Install with `tlmgr install <package-name>` if you don't have them:
+Install dependencies using `./deps.sh`. The following dependencies are required:
 
 - [fontawesome](https://ctan.org/pkg/fontawesome)
 - [tcolorbox](https://ctan.org/pkg/tcolorbox)
@@ -16,13 +16,12 @@ Install with `tlmgr install <package-name>` if you don't have them:
 - [environ](https://ctan.org/pkg/environ)
 
 Also, ensure that you have installed [cm-super](https://ctan.org/pkg/cm-super)
-(`tlmgr install cm-super`) which provides _significantly_ improved fonts for the
-T1 font encoding.
+which provides _significantly_ improved fonts for the T1 font encoding.
 
 Create PDF
 ----------
 
-``` shell
+``` sh
 xelatex resume.tex
 ```
 
@@ -31,5 +30,6 @@ xelatex resume.tex
 Feedback
 --------
 
-Please feel free to open an issue, even if it's just a comment or suggestion. I
-always love discussing how to design things better.
+Please feel free to open an issue or to email me (`cfclrk@gmail.com`), even if
+it's just a comment or suggestion. I love discussing how to design things
+better!
